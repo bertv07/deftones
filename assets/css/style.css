@@ -1,0 +1,442 @@
+/*font*/
+  @import url('https://fonts.cdnfonts.com/css/ds-digital');
+  @import url("https://use.typekit.net/emk0kgf.css");
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #0D0C0C;
+}
+nav > div > a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 6rem;
+    background-color: rgb(27, 25, 25);
+}
+
+.toca-discos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+.base{
+    background-color: #F6F6F6;
+    height: 40rem;
+    width: 60rem;
+    border-radius: 24px;
+}
+.base-cds{
+    background-color: #181616;
+    height: 39rem;
+    width: 45rem;
+    margin: .5rem;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.borde-cd{
+    height: 37rem;
+    width: 37rem;
+    margin: .5rem;
+    border-radius: 50%;
+    background-color: #0D0C0C;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.agarrar{
+    background-color: #0D0C0C;
+    position: absolute;
+    width: 7rem;
+    height: 9rem;
+    translate: 15rem -10rem;
+    z-index: 1;
+    border-radius: 32px;
+    rotate: -40deg;
+}
+.cd{
+    width: 92%;
+    height: 92%;
+    border-radius: 50%;
+    background-image: url(../img/deftones.jpeg);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes girar {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.img-girando {
+    animation: girar 4s linear infinite;
+    animation-play-state: running;
+}
+
+
+.lector{
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: #0D0C0C;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.lec{
+    border-radius: 2rem;
+    width: 2rem;
+    height: 2rem;
+    border: .2rem solid #181616;
+    background-color: #18161600;
+}
+
+.tapa-cd {
+    height: 40.2rem;
+    width: 46rem;
+    background-color: #0f0f0f94;
+    position: relative;
+    margin-top: -67%;
+    z-index: 11;
+    border-radius: 24px;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: space-around;
+    transition: all 0.5s ease;
+}
+
+.tapa-cd.active {
+    height: 2rem;
+    width: 46rem;
+    background-color: #141414ef;
+    position: relative;
+    margin-top: -67%;
+    z-index: 11;
+    border-radius: 2px;
+    backdrop-filter: blur(1px);
+    display: flex;
+    justify-content: space-around;
+}
+
+.tapa-cd.active1 {
+    height: 40.2rem;
+    width: 46rem;
+    background-color: #000000;
+    position: relative;
+    margin-top: -67%;
+    z-index: 11;
+    border-radius: 2px;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.agarre{
+    background-color: #000000;
+    width: 3rem;
+    height: 1rem;
+    z-index: 12;
+    transition: all 0.5s ease;
+
+}
+
+.agarre.active {
+    background-color: #000000;
+    width: 3rem;
+    height: .3rem;
+    z-index: 12;
+}
+
+.agarre1{
+    background-color: #000000;
+    width: 3rem;
+    height: 1rem;
+    z-index: 12;
+    transition: all 0.5s ease;
+
+}
+
+.agarre1.active {
+    background-color: #000000;
+    width: 3rem;
+    height: .3rem;
+    z-index: 12;
+}
+
+
+.btn-subir {
+    z-index: 13;
+    translate: 21.5rem -1rem;
+    position: absolute;
+}
+
+.btn-subir button {
+    width: 3rem;
+    height: 1rem;
+    background-color: #111111;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.btons{
+    width: 12rem;
+    height: 38rem;
+    margin-left: -13rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.volumen{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background-color: #838383;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    translate: 0rem -3rem; 
+}
+.volumen-center{
+    width: 9.7rem;
+    height: 9.7rem;
+    border-radius: 50%;
+    background-color: #161616;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.botones{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.bt{
+    background-color: #414141;
+    width: 4.5rem;
+    height: 1.5rem;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+.masmenos{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    translate: 0 6rem;
+    gap: 2rem;
+}
+.masmenos img{
+    width: 1dvi;
+}
+.b img{
+    width: 1rem;
+}
+.b{
+    display: flex;
+    gap: .5rem;
+    margin-left: 1rem
+}
+
+.bts{
+    margin-left: -.6rem;
+    width: 6rem;
+    height: 4rem;
+    background-color: #000000;
+    border-radius: 12px;
+}
+.bts p{
+    font-family: 'DS-Digital', sans-serif;
+    margin-top: .2rem;
+    text-align: center;
+    color: #fff;
+    font-size: 3.5rem;
+}
+#mute.color{
+    background-color: #000000;
+}
+
+
+.tv{
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.pesta{
+    background-color: #D9D6CF;
+    width: 60rem;
+    height: 40rem;
+    border: 6px outset #D9D6CF;
+}
+.cierre{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin: .5rem;
+    width: 59rem;
+    height: 2.5rem;
+    background: rgb(38,77,142);
+    background: linear-gradient(135deg, rgba(38,77,142,1) 23%, rgba(115,150,209,1) 92%);
+}
+
+.close, .maximizar, .minimizar{
+    background-color: #D9D6CF;
+    width: 1.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: .5rem;
+    height: 1.6rem;
+    border: #cacaca 1px outset;
+}
+.minimizar svg{
+    margin-top: 1rem;
+    width: 1.8rem;
+}   
+.close svg{
+    width: 1.2rem;
+}
+.maximizar svg{
+    width: 1.5rem;
+}
+.confi-div{
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    flex-direction: row;
+}
+
+.flechas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+    gap: 3rem;
+}
+
+.con svg{
+    margin-left: -2.5rem
+}
+
+.confi-div > div > svg{
+    width: 1.5rem;
+}
+
+.video{
+    margin-top: 2rem;
+    margin: 1rem;
+}
+.line{
+    width: 58rem;
+    background-color: #414141;
+    height: .7rem;
+    border-radius: 2px;
+    margin: .9rem;
+}
+.punto{
+    background-color: #414141;
+    border: 3px solid #D9D6CF;
+    width: .7rem;
+    height: 1.8rem;
+    border-radius: 12px;
+    margin-left: 5rem;
+    translate: -1rem -.6rem;
+}
+.opciones{
+    display: flex;
+    align-items: center;
+    translate: 0 -5.5rem;
+}
+
+.pla, .si{
+    margin: 1rem 1rem 1rem 1.5rem;
+    width: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.pla svg{
+    width: 1.7rem;
+}
+
+.li{
+    width: 1px;
+    height: 3.5rem;
+    background-color: #979797;
+}
+.si svg{
+    width: 1.5rem;
+}
+
+.si{
+    margin: 1rem 1rem 1rem 1.5rem;
+}
+.espul{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 1rem;
+}
+
+.info{
+    width: 45rem;
+    height: 30rem;
+    background-color: #D9D6CF;
+    border: 6px outset #D9D6CF;
+}
+.cie1{
+    justify-content: space-between;
+    width: 44rem;
+}
+
+.te{
+    margin-left: 1rem;
+    color: #979797;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.text{
+    width: 40rem;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-left: 2.5rem;
+    margin-top: 2rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.ok{
+    border: 4px outset #9c9c9c;
+    cursor: pointer;
+    width: 7rem;
+    height: 1.7rem;
+    text-align: center;
+    margin-top: 2rem;
+    margin-left: 42%;
+    font-size: 1.2rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
