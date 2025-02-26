@@ -280,18 +280,18 @@ nav{
 
 
 .tv{
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5rem;
+    position: absolute;
 }
 
 .pesta{
     background-color: #D9D6CF;
     width: 60rem;
-    height: 40rem;
+    height: 47rem;
     border: 6px outset #D9D6CF;
+    position: absolute;
+    left: 50rem;
+    display: none;
+    translate: -3rem -33rem;
 }
 .cierre{
     display: flex;
@@ -313,6 +313,7 @@ nav{
     margin-right: .5rem;
     height: 1.6rem;
     border: #cacaca 1px outset;
+    cursor: pointer;
 }
 .minimizar svg{
     margin-top: 1rem;
@@ -353,21 +354,30 @@ nav{
     margin-top: 2rem;
     margin: 1rem;
 }
-.line{
+.line-container {
     width: 58rem;
-    background-color: #414141;
-    height: .7rem;
-    border-radius: 2px;
-    margin: .9rem;
+    position: relative;
+    margin: 0.9rem;
 }
-.punto{
+
+.line {
+    width: 100%;
+    background-color: #414141;
+    height: 0.7rem;
+    border-radius: 2px;
+}
+
+.punto {
     background-color: #414141;
     border: 3px solid #D9D6CF;
-    width: .7rem;
+    width: 0.7rem;
     height: 1.8rem;
     border-radius: 12px;
-    margin-left: 5rem;
-    translate: -1rem -.6rem;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
 }
 .opciones{
     display: flex;
@@ -384,6 +394,7 @@ nav{
 }
 .pla svg{
     width: 1.7rem;
+    cursor: pointer;
 }
 
 .li{
@@ -393,6 +404,7 @@ nav{
 }
 .si svg{
     width: 1.5rem;
+    cursor: pointer;
 }
 
 .si{
@@ -402,6 +414,7 @@ nav{
     width: 1.5rem;
     height: 1.5rem;
     margin-left: 1rem;
+    cursor: pointer;
 }
 
 .info{
@@ -409,6 +422,8 @@ nav{
     height: 30rem;
     background-color: #D9D6CF;
     border: 6px outset #D9D6CF;
+    margin-top: 6rem;
+    display: none;
 }
 .cie1{
     justify-content: space-between;
@@ -439,4 +454,750 @@ nav{
     margin-left: 42%;
     font-size: 1.2rem;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.video video{
+    width:925px;
+    height:515px;
+}
+
+.vide-off{
+    width:925px;
+    height:515px;
+    background-color: #D9D6CF;
+    position: absolute;
+    translate: 0rem -519px;
+    display: none;
+}
+.vide-off.active{
+    display: block;
+    z-index: 1;
+}
+
+.winxp{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5rem;
+    flex-direction: column;
+}
+
+.todo{
+    background-color: #3C6EA6;
+    background-position: center;
+    background-size: cover;
+    width: 90vw;
+    height: 90vh;
+}
+
+.win{
+    width: 90vw;
+    height: 3rem;
+    background-color: #D4D0C8;
+    display: flex;
+    align-items: center;
+
+}
+.inicio img{
+    width: 3rem;
+    height: 3rem;
+}
+.inicio p{
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: .4rem;
+    margin-left: -.5rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.inicio {
+    border: 1px outset #f8f8f8;
+    height: 2.5rem;
+    width: 7rem;
+    margin: .3rem;
+    display: flex;
+    cursor: pointer;
+    box-shadow: -17px -15px 7px -15px rgba(0,0,0,1) inset;
+    -webkit-box-shadow: -17px -15px 7px -15px rgba(0,0,0,1) inset;
+    -moz-box-shadow: -17px -15px 7px -15px rgba(0,0,0,1) inset;
+}
+
+.inicio:hover {
+    border: 1px inset #f8f8f8;
+    height: 2.5rem;
+    width: 7rem;
+    margin: .3rem;
+    display: flex;
+    cursor: pointer;
+    box-shadow: 18px 17px 13px -15px rgba(0,0,0,1) inset;
+    -webkit-box-shadow: 18px 17px 13px -15px rgba(0,0,0,1) inset;
+    -moz-box-shadow: 18px 17px 13px -15px rgba(0,0,0,1) inset;
+}
+
+.todo {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.todo img{  
+    width: 2.5rem;
+    margin-left: 2rem;
+    cursor: pointer;
+}
+.formu{
+    width: 5.5rem !important;
+    margin-left: .9rem !important;
+    margin-bottom: -1rem;
+}
+.map{
+    width: 3rem !important;
+}
+.vi , .formu1 , .map1 , .formu2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px inset #f8f8f8;
+    height: 2.5rem;
+    width: 14.7rem;
+    box-shadow: 18px 17px 13px -15px rgba(0,0,0,1) inset;
+    -webkit-box-shadow: 18px 17px 13px -15px rgba(0,0,0,4) inset;
+    -moz-box-shadow: 18px 17px 13px -15px rgb(0, 0, 0) inset;
+    cursor: pointer;
+    display: none;
+}
+.vi img{
+    width: 1.5rem;
+    translate: 1rem .5rem;
+}
+.vi p{
+    translate: 2.5rem -1rem;
+}
+.vi p, .formu1 p , .map1 p, .formu2 p{
+    font-weight: 600;
+    margin-left: .5rem;
+    margin-right: 1rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.formu1 img , .formu2 img{
+    width: 3rem;
+    translate: 1rem -.2rem; 
+}
+.formu1 p , .formu2 p{
+    translate: 4rem -2.6rem; 
+}
+.map1 img{
+    width: 2rem;
+    translate: 1rem .2rem;
+}
+.map1 p{
+    translate: 3rem -1.5rem;
+}
+.ma{
+    width: 45rem;
+    height: 35rem;
+    background-color: #D9D6CF;
+    border: 6px outset #D9D6CF;
+    margin-top: 6rem;
+    margin-left: 10rem !important;
+    position: absolute;
+    display: none;
+}
+
+.okma{
+    border: 4px outset #9c9c9c;
+    cursor: pointer;
+    width: 7rem;
+    height: 1.7rem;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 42%;
+    font-size: 1.2rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.form-section{
+    width: 45rem;
+    height: 39rem;
+    background-color: #D9D6CF;
+    border: 6px outset #D9D6CF;
+    margin-top: 9rem;
+    margin-left: 20rem !important;
+    position: absolute;
+    display: none;
+}
+
+#contact-form{
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form-mini-section{
+    margin: 2rem;   
+}
+.form-field{
+    margin: 2rem;
+}
+.form-field label{
+    font-size: 1.7rem;
+    font-weight: 500;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.form-field input{
+    background-color: #D4D0C8;
+    border: 2px outset #9c9c9c;
+    height: 1.5rem;
+    padding-left: 1rem;
+    font-size: 1rem;
+    margin-left: 2rem;
+}
+.form-field span{
+    font-size: 1.2rem;
+}
+#form-identification{
+    translate: 12.3rem;
+}
+#form-phone{
+    translate: 7.9rem;
+}
+#form-email{
+    translate: 9.3rem;
+}
+.okama{
+    margin-top: 0;
+}
+
+.fo{
+    margin-left: 45rem !important;
+}
+.footer-section{
+    margin: 4rem;
+    margin-left: 8rem;
+}
+.footer-section h3 {
+    margin-bottom: 2rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+.footer-section a{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 1rem;
+    color: #000000;
+    margin-top: 2rem;
+}
+
+#email{
+    background-color: #D4D0C8;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+}
+
+#mensaje{
+    background-color: #D4D0C8;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+}
+.footer-section form{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+@media (max-width: 1750px) {
+    .todo{
+        margin-top: 3rem;
+    }
+    .info{
+        width: 35rem;
+        height: 25rem !important;
+    }
+    .cie1{
+        width: 96% !important;
+    }
+    .text{
+        font-size: 1rem;
+        width: 30rem;
+        height: 15rem;
+        margin-left: 2rem;
+    }
+    .pesta{
+        margin-left: -10rem;
+        margin-top: 2rem;
+        width: 50rem;
+        height: 40rem;
+    }
+    video{
+        width: 48rem !important;
+        margin-top: -3rem;
+        margin-bottom: -3rem;
+    }
+    .line{
+        width: 48rem;
+    }
+    .cierre{
+        width: 49rem;
+    }
+}
+@media (max-width: 1650px) {
+    .todo{
+        margin-top: 3rem;
+    }
+    .info{
+        width: 29rem;
+        height: 25rem !important;
+    }
+    .cie1{
+        width: 96% !important;
+    }
+    .text{
+        font-size: .9rem;
+        width: 25rem;
+        height: 12rem;
+        margin-left: 2rem;
+    }
+    .ok{
+        margin-left: 11rem;
+    }
+    .pesta{
+        margin-left: -14rem;
+        margin-top: 2rem;
+        width: 50rem;
+        height: 40rem;
+    }
+    video{
+        width: 48rem !important;
+        margin-top: -3rem;
+        margin-bottom: -3rem;
+    }
+    .line{
+        width: 48rem;
+    }
+    .cierre{
+        width: 49rem;
+    }
+    .form-section{
+        margin-top: 3rem;
+        height: 30rem;
+    }
+    #envi{
+        margin-left: 19rem;
+    }
+    .fo{
+        margin-top: 3rem;
+        translate: -20rem 0rem;
+        width: 40rem;
+        height: 30rem;
+    }
+    .footer-section{
+        margin-top: 3rem;
+        margin-left: 3rem;
+    }
+}
+@media (max-width: 1500px) {
+    .todo{
+        margin-top: 7rem;
+    }
+    .info{
+        width: 29rem;
+        height: 25rem !important;
+    }
+    .cie1{
+        width: 96% !important;
+    }
+    .text{
+        font-size: .9rem;
+        width: 25rem;
+        height: 12rem;
+        margin-left: 2rem;
+    }
+    .ok{
+        margin-left: 11rem;
+    }
+    .pesta{
+        margin-left: -16rem;
+        margin-top: 2rem;
+        width: 48rem;
+        height: 40rem;
+    }
+    video{
+        width: 45.7rem !important;
+        margin-top: -3rem;
+        margin-bottom: -3rem;
+    }
+    .line{
+        width: 46rem;
+    }
+    .cierre{
+        width: 47rem;
+    }
+    .form-section{
+        margin-top: 3rem;
+        height: 30rem;
+    }
+    #envi{
+        margin-left: 19rem;
+    }
+    .fo{
+        margin-top: 3rem;
+        translate: -20rem 0rem;
+        width: 40rem;
+        height: 30rem;
+    }
+    .footer-section{
+        margin-top: 3rem;
+        margin-left: 3rem;
+    }
+}
+@media (max-width: 1420px) {
+    .todo{
+        margin-top: 7rem;
+    }
+    .info{
+        width: 29rem;
+        height: 25rem !important;
+    }
+    .cie1{
+        width: 96% !important;
+    }
+    .text{
+        font-size: .9rem;
+        width: 25rem;
+        height: 12rem;
+        margin-left: 2rem;
+    }
+    .ok{
+        margin-left: 11rem;
+    }
+    .pesta{
+        margin-left: -16rem;
+        margin-top: 2rem;
+        width: 44rem;
+        height: 38rem;
+    }
+    video{
+        width: 42rem !important;
+        margin-top: -4rem;
+        margin-bottom: -4rem;
+    }
+    .line{
+        width: 42rem;
+    }
+    .cierre{
+        width: 43rem;
+    }
+    .form-section{
+        margin-top: 3rem;
+        height: 30rem;
+    }
+    #envi{
+        margin-left: 19rem;
+    }
+    .fo{
+        margin-top: 3rem;
+        translate: -20rem 0rem;
+        width: 40rem;
+        height: 30rem;
+    }
+    .footer-section{
+        margin-top: 3rem;
+        margin-left: 3rem;
+    }
+}
+@media (max-width: 1350px) {
+    .todo{
+        margin-top: 7rem;
+    }
+    .info{
+        width: 29rem;
+        height: 25rem !important;
+    }
+    .cie1{
+        width: 96% !important;
+    }
+    .text{
+        font-size: .9rem;
+        width: 25rem;
+        height: 12rem;
+        margin-left: 2rem;
+    }
+    .ok{
+        margin-left: 11rem;
+    }
+    .pesta{
+        margin-left: -16rem;
+        margin-top: 2rem;
+        width: 50vw;
+        height: 38rem;
+    }
+    video{
+        width: 47.5vw !important;
+        margin-top: -4rem;
+        margin-bottom: -4rem;
+    }
+    .line{
+        width: 48vw;
+    }
+    .cierre{
+        width: 48.5vw;
+    }
+    .form-section{
+        margin-top: 3rem;
+        height: 30rem;
+    }
+    #envi{
+        margin-left: 19rem;
+    }
+    .fo{
+        margin-top: 3rem;
+        translate: -20rem 0rem;
+        width: 40rem;
+        height: 30rem;
+    }
+    .footer-section{
+        margin-top: 3rem;
+        margin-left: 3rem;
+    }
+}
+
+@media (max-width: 1300px) {
+    video{
+        margin-top: -6rem;
+        margin-bottom: -5rem;
+    }
+    .pesta{
+        height: 36rem;
+    }
+    .fo{
+        width: 52vw;
+    }
+}
+
+@media (max-width: 1250px) {
+    video{
+        width: 43vw !important;
+        margin-top: -6rem;
+        margin-bottom: -5rem;
+    }
+    .pesta{
+        width: 46vw;
+        height: 36rem;
+    }
+    .line{
+        width: 44vw;
+    }
+    .cierre{
+        width: 44.5vw;
+    }
+}
+
+@media (max-width: 1200px) {
+    video{
+        width: 43vw !important;
+        margin-top: -8rem;
+        margin-bottom: -7rem;
+    }
+    .pesta{
+        margin-top: 6rem;
+        width: 46vw;
+        height: 32rem;
+    }
+    .line{
+        width: 44vw;
+    }
+    .cierre{
+        width: 44.5vw;
+    }
+    .form-section{
+        margin-top: 8rem;
+        width: 50vw;
+    }
+    .form-field label {
+        font-size: 1.2rem;
+    }
+    #envi{
+        margin-left: 15rem;
+    }
+}
+
+@media (max-width: 1150px) {
+    .todo{
+        margin-top: 7rem;
+    }
+    .info{
+        width: 20rem;
+        height: 20rem !important;
+        margin-left: 1rem;
+    }
+    .cie1{
+        width: 96% !important;
+    }
+    .text{
+        font-size: .7rem;
+        width: 18rem;
+        height: 10rem;
+        margin-left: 1rem;
+    }
+    .ok{
+        margin-left: 6rem;
+    }
+    .pesta{
+        margin-left: -22rem;
+        margin-top: 10rem;
+        width: 47vw;
+        height: 30rem;
+    }
+    video{
+        width: 44vw !important;
+        margin-top: -8rem;
+        margin-bottom: -7rem;
+    }
+    .line{
+        width: 44vw;
+    }
+    .cierre{
+        width: 45.5vw;
+    }
+    .form-section{
+        margin-top: 3rem;
+        height: 30rem;
+    }
+    #envi{
+        margin-left: 19rem;
+    }
+    .fo{
+        width: 52vw;
+        translate: -27rem;
+    }
+    .footer-section{
+        margin-top: 3rem;
+        margin-left: 3rem;
+    }
+    .opciones > div > svg{
+        width: 1.2rem;
+        margin-top: -1rem;
+    }
+    .li{
+        height: 2.5rem;
+        margin-top: -1rem;
+    }
+    .form-field span {
+        font-size: 1rem;
+    }
+    .form-field input {
+        font-size: .7rem;
+
+    }
+    #envi{
+        margin-left: 13rem;
+    }
+    .footer-section input{ 
+        width: 8rem;
+    }
+    .ma{
+        width: 70vw;
+    }
+    iframe{
+        width: 66vw;
+    }
+    .toca-discos{
+        margin: 5rem;
+        rotate: 90deg;
+
+    }
+}
+
+@media (max-width: 950px) {
+    .todo{
+        margin-top: 7rem;
+    }
+    .info{
+        width: 20rem;
+        height: 20rem !important;
+        margin-left: 1rem;
+    }
+    .cie1{
+        width: 96% !important;
+    }
+    .text{
+        font-size: .7rem;
+        width: 18rem;
+        height: 10rem;
+        margin-left: 1rem;
+    }
+    .ok{
+        margin-left: 6rem;
+    }
+    .pesta{
+        margin-left: -24rem;
+        margin-top: 10rem;
+        width: 47vw;
+        height: 26rem;
+    }
+    video{
+        width: 44vw !important;
+        margin-top: -9rem;
+        margin-bottom: -9rem;
+    }
+    .line{
+        width: 44vw;
+    }
+    .cierre{
+        width: 45.5vw;
+    }
+    .form-section{
+        margin-top: 3rem;
+        height: 30rem;
+    }
+    #envi{
+        margin-left: 19rem;
+    }
+    .fo{
+        width: 55vw;
+        translate: -30rem;
+    }
+    .footer-section{
+        margin-top: 3rem;
+        margin-left: 3rem;
+    }
+    .opciones{
+        margin-left: -1rem;
+    }
+    .opciones > div > svg{
+        width: 1.1rem;
+        margin-top: -1rem;
+    }
+    .li{
+        height: 2.5rem;
+        margin-top: -1rem;
+    }
+    .form-mini-section{
+        margin-left: .5rem;
+    }
+    #envi{
+        margin-left: 11rem;
+    }
+}
+
+@media (max-width: 700px) { /*tlf*/
+    video{
+        width: 43vw !important;
+        margin-top: -6rem;
+        margin-bottom: -5rem;
+    }
+    .pesta{
+        width: 46vw;
+        height: 36rem;
+    }
+    .line{
+        width: 44vw;
+    }
+    .cierre{
+        width: 44.5vw;
+    }
 }
